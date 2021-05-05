@@ -20,11 +20,6 @@ function searchController($http) {
         })
 }
 
-searchController.component("searchController", {
-    templateUrl: 'Frontend/search/search.html',
-    controller: searchController
-    
-})
 
 
 
