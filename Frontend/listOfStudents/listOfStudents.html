@@ -1,0 +1,46 @@
+        <section ng-controller="listController" class="container">
+            <div ng-style="x"   style="display: none;">
+                <h3>Update Student</h3>
+            
+                <table class="table table-bordered" name="myform">
+            
+                    <tr>
+                        <input type="hidden" ng-model="edit.index">
+
+                        <td><input class="form-control" type="text" ng-model="edit.rollNumber" placeholder="roll Number"></td>
+                        <td><input class="form-control" type="text" ng-model="edit.updatename" placeholder="name"></td>
+                        <td><input class="form-control" type="text" ng-model="edit.age" placeholder="age"></td>
+
+                        <td><input class="form-control" type="email" ng-model="edit.email" placeholder="email" ></td>
+                        <td><input class="form-control" type="button" ng-click="updateUser()" value="update" class="btn btn-success" ></td>
+                    </tr>
+                </table>
+                <br>
+            </div>
+        
+            <table class="table table-bordered">
+                <h3>List of Students</h3>
+                <thead style="background: #dddd">
+                    <th>Roll Number</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Email</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                    <th>Show More</th>
+                </thead>
+                <tr ng-repeat="data in students | filter: listController.rollNumber">
+                    <td>{{data.rollNumber}}</td>
+                    <td>{{data.name}}</td>
+                    <td>{{data.age}}</td>
+                    <td>{{data.email}}</td>
+                    <td><input type="button" class="btn btn-info" ng-click="edit()" value="edit" ></td>
+                    <td><input type="button" class="btn btn-danger" ng-click="delete()" value="delete"> </td>
+                    <td><button class="btn btn-info" ng-click="openModal()" >show more</button></td>
+
+
+
+                </tr>
+            </table>
+
+        </section>

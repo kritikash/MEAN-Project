@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student Portal</title>
+        <link rel="stylesheet" type="text/css" href="http://stackpath.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+        <link data-require="bootstrap-css@3.*" data-semver="3.3.6" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" />
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.0/angular.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.0/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.0/angular-animate.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.0/angular-touch.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.js" ></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular-route.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+
+        
+        <body ng-app="studentPortal">
+            <section  class="container">
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                      <div class="navbar-header">
+                        <a class="navbar-brand" >Student Portal</a>
+                      </div>
+                      <ul class="nav navbar-nav">
+                        <li><a ui-sref="store">Home</a></li>
+                        <li><a  ui-sref="store">Add Student</a></li>
+                        <li><a ui-sref=" "> List of students</a></li>
+                        <li><a ui-sref="show">Search</a></li>
+                      </ul>
+                    </div>
+                  </nav>
+                  <ui-view></ui-view>
+                
+            </section>
+            <script src="main.js"></script>
+            <script src="/Frontend/addStudent/addController.js"></script>
+            <script type="text/javascript" src="Frontend/listOfStudents/listController.js"></script>
+            <script type="text/javascript" src="Frontend/search/search.js"></script>
+
+
+        
+        </body>
+
+       
+       
+       
+    
+        
+
+
+    </head>
+</html>
