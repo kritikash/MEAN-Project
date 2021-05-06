@@ -1,6 +1,6 @@
-var searchController = angular.module("studentPortal", []);
+var search = angular.module("studentPortal", []);
 
-function searchController($http) {
+search.controller('searchController', function($http) {
 
     this.students = [
         {"rollNumber":1,"name":"Kritika","age":22,"email":"kritika@gmail.com "},
@@ -18,21 +18,7 @@ function searchController($http) {
         .catch(error =>{
             console.log(error);
         })
-}
-
-searchController.component("searchController", {
-    templateUrl: 'Frontend/search/search.html',
-    controller: searchController
-    
-})
+});
 
 
-
-/*router.route('/show').post((req,res) => {
-    Student.find( {rollNumber: {$in: req.body.rollNumber } }).exec()
-    .then(students => {
-        res.send(students);
-    })
-    .catch(err => res.status(400).json('error: ' + err))
-});*/
 

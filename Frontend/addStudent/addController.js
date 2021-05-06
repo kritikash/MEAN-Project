@@ -1,7 +1,7 @@
-var addController = angular.module("studentPortal", []);
+var add = angular.module("studentPortal", []);
 
-addController.controller('addController', function($scope,$http) {
-    console.log("asd")
+add.controller('addController', function($scope,$http) {
+    console.log("add controller")
 
     $scope.students = [
         {"rollNumber":1,"name":"Kritika","age":22,"email":"kritika@gmail.com "},
@@ -35,7 +35,7 @@ addController.controller('addController', function($scope,$http) {
         .catch(error =>{
             console.log(error);
         })
-})
+});
 
 
 

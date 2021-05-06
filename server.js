@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 
-const StudentRoute = require('./routes/student')
+const StudentRoute = require('./backend/routes/student')
 
 
 
@@ -35,8 +35,8 @@ app.listen(PORT, () => {
 
 app.use('/api/student', StudentRoute)
 
-app.get('*', function(req, res){
-    res.render('index.html');
+app.get('/*', function(req, res){
+    res.sendfile(app.get('appPath') + '/index.html');
 });
 
 
